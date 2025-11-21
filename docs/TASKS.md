@@ -23,15 +23,15 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 0.2 Basic configuration
 
-* [ ] Create `application.properties` with:
+* [x] Create `application.yaml` with:
 
-  * [ ] `spring.datasource.url`
-  * [ ] `spring.datasource.username`
-  * [ ] `spring.datasource.password`
-  * [ ] `spring.jpa.hibernate.ddl-auto=none`
-  * [ ] `spring.flyway.enabled=true`
-* [ ] Verify app starts and fails only because DB doesn’t exist / isn’t reachable.
-* [ ] Create `product_feedback_db` database in MySQL.
+  * [x] `spring.datasource.url`
+  * [x] `spring.datasource.username`
+  * [x] `spring.datasource.password`
+  * [x] `spring.jpa.hibernate.ddl-auto=none`
+  * [x] `spring.flyway.enabled=true`
+* [x] Verify app starts and fails only because DB doesn’t exist / isn’t reachable.
+* [x] Create `product_feedback_db` database in MySQL.
 
 ---
 

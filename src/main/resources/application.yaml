@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: product-feedback-app
+  datasource:
+    url: jdbc:mysql://localhost:3306/product_feedback_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+
+# Notes:
+# - DB is configured for local MySQL. Adjust username/password as needed.
+# - Flyway is enabled; schema will be managed via db/migration scripts.
+# - DDL generation is disabled intentionally per guidelines.
