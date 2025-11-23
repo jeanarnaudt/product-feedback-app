@@ -140,23 +140,23 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 3.3 MapStruct mappers
 
-* [ ] Create `FeedbackMapper`:
+* [x] Create `FeedbackMapper`:
 
-  * [ ] `toListItemDto(Feedback)`.
-  * [ ] `toDetailDto(Feedback)`.
-  * [ ] `fromCreateRequest(FeedbackCreateRequest)`.
-  * [ ] `updateEntityFromRequest(FeedbackUpdateRequest, @MappingTarget Feedback)`.
-* [ ] Create `CommentMapper`:
+  * [x] `toListItemDto(Feedback)`.
+  * [x] `toDetailDto(Feedback)`.
+  * [x] `fromCreateRequest(FeedbackCreateRequest)`.
+  * [x] `updateEntityFromRequest(FeedbackUpdateRequest, @MappingTarget Feedback)`.
+* [x] Create `CommentMapper`:
 
-  * [ ] `toDto(Comment)`.
-  * [ ] `fromCreateRequest(CommentCreateRequest)`.
-  * [ ] `updateEntityFromRequest(CommentUpdateRequest, @MappingTarget Comment)`.
-* [ ] Create `ReplyMapper`:
+  * [x] `toDto(Comment)`.
+  * [x] `fromCreateRequest(CommentCreateRequest)`.
+  * [x] `updateEntityFromRequest(CommentUpdateRequest, @MappingTarget Comment)`.
+* [x] Create `ReplyMapper`:
 
-  * [ ] `toDto(Reply)`.
-  * [ ] `fromCreateRequest(ReplyCreateRequest)`.
-  * [ ] `updateEntityFromRequest(ReplyUpdateRequest, @MappingTarget Reply)`.
-* [ ] Configure MapStruct annotation processing and make sure the project builds.
+  * [x] `toDto(Reply)`.
+  * [x] `fromCreateRequest(ReplyCreateRequest)`.
+  * [x] `updateEntityFromRequest(ReplyUpdateRequest, @MappingTarget Reply)`.
+* [x] Configure MapStruct annotation processing and make sure the project builds.
 
 ---
 
