@@ -76,27 +76,27 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 2.1 Entities
 
-* [ ] Create `User` entity matching `users` table.
-* [ ] Create `Category` entity matching `categories` table.
-* [ ] Create `Feedback` entity:
+* [x] Create `User` entity matching `users` table.
+* [x] Create `Category` entity matching `categories` table.
+* [x] Create `Feedback` entity:
 
-  * [ ] Fields for title, description, status, commentCount, upvoteCount, timestamps.
-  * [ ] `@ManyToOne` to `User` (author).
-  * [ ] `@ManyToOne` to `Category`.
-  * [ ] `@OneToMany` to `Comment`.
-* [ ] Create `Comment` entity:
+  * [x] Fields for title, description, status, commentCount, upvoteCount, timestamps.
+  * [x] `@ManyToOne` to `User` (author).
+  * [x] `@ManyToOne` to `Category`.
+  * [x] `@OneToMany` to `Comment`.
+* [x] Create `Comment` entity:
 
-  * [ ] Fields for content, timestamps.
-  * [ ] `@ManyToOne` to `Feedback`.
-  * [ ] `@ManyToOne` to `User` (author).
-  * [ ] `@OneToMany` to `Reply`.
-* [ ] Create `Reply` entity:
+  * [x] Fields for content, timestamps.
+  * [x] `@ManyToOne` to `Feedback`.
+  * [x] `@ManyToOne` to `User` (author).
+  * [x] `@OneToMany` to `Reply`.
+* [x] Create `Reply` entity:
 
-  * [ ] Fields for content, timestamps.
-  * [ ] `@ManyToOne` to `Comment`.
-  * [ ] `@ManyToOne` to `User` (author).
-  * [ ] `@ManyToOne` to `User` (replyToUser, optional).
-* [ ] Create `Upvote` entity (or map via `@IdClass`/`@EmbeddedId`) matching composite PK.
+  * [x] Fields for content, timestamps.
+  * [x] `@ManyToOne` to `Comment`.
+  * [x] `@ManyToOne` to `User` (author).
+  * [x] `@ManyToOne` to `User` (replyToUser, optional).
+* [x] Create `Upvote` entity (or map via `@IdClass`/`@EmbeddedId`) matching composite PK.
 
 ### 2.2 Repositories
 
