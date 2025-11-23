@@ -53,4 +53,15 @@ public class Feedback {
 
     @Column(name = "updated_at", insertable = false, updatable = false)
     private Instant updatedAt;
+
+    // --- Convenience counters API ---
+    public void incrementCommentCount(int delta) {
+        if (delta <= 0) return;
+        this.commentCount = Math.max(0, this.commentCount + delta);
+    }
+
+    public void decrementCommentCount(int delta) {
+        if (delta <= 0) return;
+        this.commentCount = Math.max(0, this.commentCount - delta);
+    }
 }

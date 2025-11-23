@@ -188,21 +188,21 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 4.3 CommentService (with counters)
 
-* [ ] Implement `void addComment(Long feedbackId, CommentCreateRequest request)`:
+* [x] Implement `void addComment(Long feedbackId, CommentCreateRequest request)`:
 
-  * [ ] Load feedback.
-  * [ ] Map request to `Comment`.
-  * [ ] Set author & timestamps.
-  * [ ] Save comment.
-  * [ ] `feedback.incrementCommentCount(1)`.
-* [ ] Implement `void updateComment(Long commentId, CommentUpdateRequest request)`.
-* [ ] Implement `void deleteComment(Long commentId)`:
+  * [x] Load feedback.
+  * [x] Map request to `Comment`.
+  * [x] Set author & timestamps.
+  * [x] Save comment.
+  * [x] `feedback.incrementCommentCount(1)`.
+* [x] Implement `void updateComment(Long commentId, CommentUpdateRequest request)`.
+* [x] Implement `void deleteComment(Long commentId)`:
 
-  * [ ] Load comment & feedback.
-  * [ ] Count replies by comment id.
-  * [ ] Delete replies (if no cascade).
-  * [ ] Delete comment.
-  * [ ] `feedback.decrementCommentCount(1 + replyCount)`.
+  * [x] Load comment & feedback.
+  * [x] Count replies by comment id.
+  * [x] Delete replies (if no cascade).
+  * [x] Delete comment.
+  * [x] `feedback.decrementCommentCount(1 + replyCount)`.
 
 ### 4.4 ReplyService (with counters)
 
