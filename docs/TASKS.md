@@ -172,19 +172,19 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 4.2 FeedbackService
 
-* [ ] Implement method: `List<FeedbackListItemDto> getSuggestions(Optional<String> sort, Optional<String> categorySlug)`.
-* [ ] Implement method: `FeedbackDetailDto getFeedbackDetail(Long id)`.
-* [ ] Implement method: `Long createFeedback(FeedbackCreateRequest request)`:
+* [x] Implement method: `List<FeedbackListItemDto> getSuggestions(Optional<String> sort, Optional<String> categorySlug)`.
+* [x] Implement method: `FeedbackDetailDto getFeedbackDetail(Long id)`.
+* [x] Implement method: `Long createFeedback(FeedbackCreateRequest request)`:
 
-  * [ ] Map from DTO.
-  * [ ] Attach current user.
-  * [ ] Attach category.
-* [ ] Implement method: `FeedbackUpdateRequest getUpdateForm(Long id)`.
-* [ ] Implement method: `void updateFeedback(Long id, FeedbackUpdateRequest request)`:
+  * [x] Map from DTO.
+  * [x] Attach current user.
+  * [x] Attach category.
+* [x] Implement method: `FeedbackUpdateRequest getUpdateForm(Long id)`.
+* [x] Implement method: `void updateFeedback(Long id, FeedbackUpdateRequest request)`:
 
-  * [ ] Resolve category.
-  * [ ] Apply changes via mapper.
-* [ ] Implement method: `void deleteFeedback(Long id)` with ownership/admin checks (later).
+  * [x] Resolve category.
+  * [x] Apply changes via mapper.
+* [x] Implement method: `void deleteFeedback(Long id)` with ownership/admin checks (later).
 
 ### 4.3 CommentService (with counters)
 
