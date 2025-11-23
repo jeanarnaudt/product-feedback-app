@@ -53,11 +53,11 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 1.2 V2 – Reference data
 
-* [ ] Create `V2__seed_reference_data.sql`:
+* [x] Create `V2__seed_reference_data.sql`:
 
-  * [ ] Insert default categories: `Feature`, `UI`, `UX`, `Enhancement`, `Bug`.
-  * [ ] Insert `seeduser` with placeholder password hash.
-* [ ] Run app; confirm categories and seed user exist.
+  * [x] Insert default categories: `Feature`, `UI`, `UX`, `Enhancement`, `Bug`.
+  * [x] Insert `seeduser` with placeholder password hash.
+* [x] Run app; confirm categories and seed user exist.
 
 ### 1.3 V3 – Seed from data.json
 
