@@ -131,12 +131,12 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 3.2 Comment & Reply DTOs
 
-* [ ] Create `CommentDto`.
-* [ ] Create `CommentCreateRequest`.
-* [ ] Create `CommentUpdateRequest`.
-* [ ] Create `ReplyDto`.
-* [ ] Create `ReplyCreateRequest`.
-* [ ] Create `ReplyUpdateRequest`.
+* [x] Create `CommentDto`.
+* [x] Create `CommentCreateRequest`.
+* [x] Create `CommentUpdateRequest`.
+* [x] Create `ReplyDto`.
+* [x] Create `ReplyCreateRequest`.
+* [x] Create `ReplyUpdateRequest`.
 
 ### 3.3 MapStruct mappers
 
