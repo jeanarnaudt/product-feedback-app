@@ -68,7 +68,7 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
   * [x] Find `seeduser` id.
   * [x] Insert feedback based on JSON.
   * [x] Insert comments + replies based on JSON.
-* [ ] Run app; confirm seed feedback/comments/replies created correctly.
+* [x] Run app; confirm seed feedback/comments/replies created correctly.
 
 ---
 
