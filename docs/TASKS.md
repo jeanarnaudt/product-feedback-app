@@ -100,23 +100,23 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 2.2 Repositories
 
-* [ ] Create `UserRepository` with:
+* [x] Create `UserRepository` with:
 
-  * [ ] `Optional<User> findByUsername(String username);`
-  * [ ] `Optional<User> findByEmail(String email);`
-* [ ] Create `CategoryRepository`.
-* [ ] Create `FeedbackRepository` with:
+  * [x] `Optional<User> findByUsername(String username);`
+  * [x] `Optional<User> findByEmail(String email);`
+* [x] Create `CategoryRepository`.
+* [x] Create `FeedbackRepository` with:
 
-  * [ ] `List<Feedback> findByStatus(String status);`
-  * [ ] Methods for filtering by category & sorting (or to be added later).
-* [ ] Create `CommentRepository`.
-* [ ] Create `ReplyRepository` with:
+  * [x] `List<Feedback> findByStatus(String status);`
+  * [x] Methods for filtering by category & sorting (or to be added later).
+* [x] Create `CommentRepository`.
+* [x] Create `ReplyRepository` with:
 
-  * [ ] `long countByCommentId(Long commentId);`
-  * [ ] `void deleteByCommentId(Long commentId);`
-* [ ] Create `UpvoteRepository` with:
+  * [x] `long countByCommentId(Long commentId);`
+  * [x] `void deleteByCommentId(Long commentId);`
+* [x] Create `UpvoteRepository` with:
 
-  * [ ] `Optional<Upvote> findByUserIdAndFeedbackId(Long userId, Long feedbackId);`
+  * [x] `Optional<Upvote> findByUserIdAndFeedbackId(Long userId, Long feedbackId);`
 
 ---
 

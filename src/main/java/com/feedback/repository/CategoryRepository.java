@@ -1,0 +1,7 @@
+package com.feedback.repository;
+
+import com.feedback.domain.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+}
