@@ -236,17 +236,17 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 5.1 FeedbackController
 
-* [ ] `GET /feedback` → list using `FeedbackService.getSuggestions`.
-* [ ] `GET /feedback/{id}` → detail using `getFeedbackDetail`.
-* [ ] `GET /feedback/new` → show `FeedbackCreateRequest` form.
-* [ ] `POST /feedback` → create feedback:
+* [x] `GET /feedback` → list using `FeedbackService.getSuggestions`.
+* [x] `GET /feedback/{id}` → detail using `getFeedbackDetail`.
+* [x] `GET /feedback/new` → show `FeedbackCreateRequest` form.
+* [x] `POST /feedback` → create feedback:
 
-  * [ ] Use `@Valid FeedbackCreateRequest`.
-  * [ ] Redirect to detail.
-* [ ] `GET /feedback/{id}/edit` → show `FeedbackUpdateRequest` form.
-* [ ] `POST /feedback/{id}` → update feedback.
-* [ ] `POST /feedback/{id}/delete` → delete feedback.
-* [ ] `POST /feedback/{id}/upvote` → call `UpvoteService.toggleUpvote` and redirect back.
+  * [x] Use `@Valid FeedbackCreateRequest`.
+  * [x] Redirect to detail.
+* [x] `GET /feedback/{id}/edit` → show `FeedbackUpdateRequest` form.
+* [x] `POST /feedback/{id}` → update feedback.
+* [x] `POST /feedback/{id}/delete` → delete feedback.
+* [x] `POST /feedback/{id}/upvote` → call `UpvoteService.toggleUpvote` and redirect back.
 
 ### 5.2 CommentController
 
