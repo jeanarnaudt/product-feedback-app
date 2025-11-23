@@ -124,10 +124,10 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 3.1 Feedback DTOs
 
-* [ ] Create `FeedbackListItemDto`.
-* [ ] Create `FeedbackDetailDto`.
-* [ ] Create `FeedbackCreateRequest` with validation.
-* [ ] Create `FeedbackUpdateRequest` with validation.
+* [x] Create `FeedbackListItemDto`.
+* [x] Create `FeedbackDetailDto`.
+* [x] Create `FeedbackCreateRequest` with validation.
+* [x] Create `FeedbackUpdateRequest` with validation.
 
 ### 3.2 Comment & Reply DTOs
 
