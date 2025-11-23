@@ -164,11 +164,11 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 4.1 UserService
 
-* [ ] Create `UserService`:
-
-  * [ ] `User getCurrentUser()` using `SecurityContext`.
-  * [ ] `User registerUser(...)` to be used by AuthService later.
-  * [ ] Helper methods to fetch user by id/username.
+* [x] Create `UserService`:
+  
+  * [x] `User getCurrentUser()` using `SecurityContext`.
+  * [x] `User registerUser(...)` to be used by AuthService later.
+  * [x] Helper methods to fetch user by id/username.
 
 ### 4.2 FeedbackService
 
