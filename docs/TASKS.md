@@ -33,23 +33,23 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 * [x] Verify app starts and fails only because DB doesn’t exist / isn’t reachable.
 * [x] Create `product_feedback_db` database in MySQL.
 
----
+--- 
 
 ## 1. Flyway Migrations & Schema
 
 ### 1.1 V1 – Schema
 
-* [ ] Create `src/main/resources/db/migration/V1__init_schema.sql`:
+* [x] Create `src/main/resources/db/migration/V1__init_schema.sql`:
 
-  * [ ] `users` table.
-  * [ ] `categories` table.
-  * [ ] `feedback` table (with `comment_count`, `upvote_count`).
-  * [ ] `comments` table.
-  * [ ] `replies` table.
-  * [ ] `upvotes` table.
-  * [ ] Indexes for common queries.
-* [ ] Run app and confirm Flyway applies V1 successfully.
-* [ ] Inspect DB to confirm tables created correctly.
+  * [x] `users` table.
+  * [x] `categories` table.
+  * [x] `feedback` table (with `comment_count`, `upvote_count`).
+  * [x] `comments` table.
+  * [x] `replies` table.
+  * [x] `upvotes` table.
+  * [x] Indexes for common queries.
+* [x] Run app and confirm Flyway applies V1 successfully.
+* [x] Inspect DB to confirm tables created correctly.
 
 ### 1.2 V2 – Reference data
 
