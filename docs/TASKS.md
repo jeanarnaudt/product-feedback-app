@@ -206,20 +206,20 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 4.4 ReplyService (with counters)
 
-* [ ] Implement `void addReply(Long commentId, ReplyCreateRequest request)`:
+* [x] Implement `void addReply(Long commentId, ReplyCreateRequest request)`:
 
-  * [ ] Load comment & feedback.
-  * [ ] Map request to `Reply`.
-  * [ ] Set author & timestamps.
-  * [ ] Optionally resolve `replyToUser` from username.
-  * [ ] Save reply.
-  * [ ] `feedback.incrementCommentCount(1)`.
-* [ ] Implement `void updateReply(Long replyId, ReplyUpdateRequest request)`.
-* [ ] Implement `void deleteReply(Long replyId)`:
+  * [x] Load comment & feedback.
+  * [x] Map request to `Reply`.
+  * [x] Set author & timestamps.
+  * [x] Optionally resolve `replyToUser` from username.
+  * [x] Save reply.
+  * [x] `feedback.incrementCommentCount(1)`.
+* [x] Implement `void updateReply(Long replyId, ReplyUpdateRequest request)`.
+* [x] Implement `void deleteReply(Long replyId)`:
 
-  * [ ] Load reply & feedback.
-  * [ ] Delete reply.
-  * [ ] `feedback.decrementCommentCount(1)`.
+  * [x] Load reply & feedback.
+  * [x] Delete reply.
+  * [x] `feedback.decrementCommentCount(1)`.
 
 ### 4.5 UpvoteService
 
