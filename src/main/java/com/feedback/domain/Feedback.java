@@ -64,4 +64,13 @@ public class Feedback {
         if (delta <= 0) return;
         this.commentCount = Math.max(0, this.commentCount - delta);
     }
+
+    // --- Upvote counters API ---
+    public void incrementUpvoteCount() {
+        this.upvoteCount = Math.max(0, this.upvoteCount + 1);
+    }
+
+    public void decrementUpvoteCount() {
+        this.upvoteCount = Math.max(0, this.upvoteCount - 1);
+    }
 }

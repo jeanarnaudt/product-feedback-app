@@ -223,12 +223,12 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 4.5 UpvoteService
 
-* [ ] Create `UpvoteService` with method `void toggleUpvote(Long feedbackId)`:
+* [x] Create `UpvoteService` with method `void toggleUpvote(Long feedbackId)`:
 
-  * [ ] Get current user.
-  * [ ] Check if upvote exists.
-  * [ ] If exists: delete + `feedback.decrementUpvoteCount()`.
-  * [ ] If not: create + `feedback.incrementUpvoteCount()`.
+  * [x] Get current user.
+  * [x] Check if upvote exists.
+  * [x] If exists: delete + `feedback.decrementUpvoteCount()`.
+  * [x] If not: create + `feedback.incrementUpvoteCount()`.
 
 ---
 
