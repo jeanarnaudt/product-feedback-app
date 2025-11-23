@@ -61,13 +61,13 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 1.3 V3 – Seed from data.json
 
-* [ ] Place `data.json` in `src/main/resources/data/data.json`.
-* [ ] Create `db.migration.V3__SeedInitialFeedbackFromJson` Java migration:
+* [x] Place `data.json` in `src/main/resources/data/data.json`.
+* [x] Create `db.migration.V3__SeedInitialFeedbackFromJson` Java migration:
 
-  * [ ] Load JSON with Jackson.
-  * [ ] Find `seeduser` id.
-  * [ ] Insert feedback based on JSON.
-  * [ ] Insert comments + replies based on JSON.
+  * [x] Load JSON with Jackson.
+  * [x] Find `seeduser` id.
+  * [x] Insert feedback based on JSON.
+  * [x] Insert comments + replies based on JSON.
 * [ ] Run app; confirm seed feedback/comments/replies created correctly.
 
 ---

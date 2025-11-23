@@ -1,0 +1,36 @@
+{
+  "productRequests": [
+    {
+      "title": "Add tags for solutions",
+      "category": "feature",
+      "status": "suggestion",
+      "upvotes": 112,
+      "description": "Easier to search for solutions based on a specific stack.",
+      "comments": [
+        {
+          "content": "This would be really helpful!",
+          "replies": [
+            {
+              "content": "Totally agree."
+            }
+          ]
+        },
+        {
+          "content": "I think tags could clutter the UI."
+        }
+      ]
+    },
+    {
+      "title": "Add a dark theme option",
+      "category": "ui",
+      "status": "suggestion",
+      "upvotes": 99,
+      "description": "It would help people with light sensitivities and who prefer dark mode.",
+      "comments": [
+        {
+          "content": "Dark mode is a must in 2025!"
+        }
+      ]
+    }
+  ]
+}
