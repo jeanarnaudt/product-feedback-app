@@ -265,19 +265,19 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 5.3 ReplyController
 
-* [ ] `POST /comments/{commentId}/replies`:
+* [x] `POST /comments/{commentId}/replies`:
 
-  * [ ] Accept `ReplyCreateRequest`.
-  * [ ] Need `feedbackId` as hidden field for redirect.
-  * [ ] Call `ReplyService.addReply`.
-* [ ] `POST /replies/{replyId}/edit` (optional):
+  * [x] Accept `ReplyCreateRequest`.
+  * [x] Need `feedbackId` as hidden field for redirect.
+  * [x] Call `ReplyService.addReply`.
+* [x] `POST /replies/{replyId}/edit` (optional):
 
-  * [ ] Accept `ReplyUpdateRequest`.
-  * [ ] Call `ReplyService.updateReply`.
-* [ ] `POST /replies/{replyId}/delete`:
+  * [x] Accept `ReplyUpdateRequest`.
+  * [x] Call `ReplyService.updateReply`.
+* [x] `POST /replies/{replyId}/delete`:
 
-  * [ ] Accept `feedbackId` as hidden field.
-  * [ ] Call `ReplyService.deleteReply`.
+  * [x] Accept `feedbackId` as hidden field.
+  * [x] Call `ReplyService.deleteReply`.
 
 ---
 
