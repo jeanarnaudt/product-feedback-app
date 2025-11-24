@@ -250,18 +250,18 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 5.2 CommentController
 
-* [ ] `POST /feedback/{feedbackId}/comments`:
+* [x] `POST /feedback/{feedbackId}/comments`:
 
-  * [ ] Accept `CommentCreateRequest`.
-  * [ ] Call `CommentService.addComment`.
-* [ ] `POST /comments/{commentId}/edit` (optional, or `PUT` style):
+  * [x] Accept `CommentCreateRequest`.
+  * [x] Call `CommentService.addComment`.
+* [x] `POST /comments/{commentId}/edit` (optional, or `PUT` style):
 
-  * [ ] Accept `CommentUpdateRequest`.
-  * [ ] Call `CommentService.updateComment`.
-* [ ] `POST /comments/{commentId}/delete`:
+  * [x] Accept `CommentUpdateRequest`.
+  * [x] Call `CommentService.updateComment`.
+* [x] `POST /comments/{commentId}/delete`:
 
-  * [ ] Accept `feedbackId` as hidden field.
-  * [ ] Call `CommentService.deleteComment`.
+  * [x] Accept `feedbackId` as hidden field.
+  * [x] Call `CommentService.deleteComment`.
 
 ### 5.3 ReplyController
 
