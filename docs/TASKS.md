@@ -285,18 +285,18 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 6.1 Security Configuration
 
-* [ ] Create `SecurityConfig`:
+* [x] Create `SecurityConfig`:
 
-  * [ ] Permit `"/", "/feedback/**", "/roadmap", "/auth/**", "/css/**", "/js/**", "/img/**"`.
-  * [ ] Require authentication for:
+  * [x] Permit `"/", "/feedback/**", "/roadmap", "/auth/**", "/css/**", "/js/**", "/img/**"`.
+  * [x] Require authentication for:
 
-    * [ ] Feedback create/edit/delete.
-    * [ ] Comment/reply create/edit/delete.
-    * [ ] Upvotes.
-    * [ ] Profile routes.
-  * [ ] Restrict `/admin/**` to `ROLE_ADMIN`.
-* [ ] Configure form login at `/auth/login`.
-* [ ] Configure logout at `/auth/logout`.
+    * [x] Feedback create/edit/delete.
+    * [x] Comment/reply create/edit/delete.
+    * [x] Upvotes.
+    * [x] Profile routes.
+  * [x] Restrict `/admin/**` to `ROLE_ADMIN`.
+* [x] Configure form login at `/auth/login`.
+* [x] Configure logout at `/auth/logout`.
 
 ### 6.2 UserDetails & Auth
 
