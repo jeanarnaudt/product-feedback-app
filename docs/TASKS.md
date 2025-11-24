@@ -366,13 +366,13 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 8.1 Validation & errors
 
-* [ ] Ensure all request DTOs have `@Valid` in controllers.
-* [ ] Add `GlobalExceptionHandler`:
+* [x] Ensure all request DTOs have `@Valid` in controllers.
+* [x] Add `GlobalExceptionHandler`:
 
-  * [ ] Handle not-found exceptions (404).
-  * [ ] Handle access denied (403).
-  * [ ] Handle generic exceptions (500).
-* [ ] Create `error/404.html`, `error/403.html`, `error/500.html`.
+  * [x] Handle not-found exceptions (404).
+  * [x] Handle access denied (403).
+  * [x] Handle generic exceptions (500).
+* [x] Create `error/404.html`, `error/403.html`, `error/500.html`.
 
 ### 8.2 Styling & responsiveness
 

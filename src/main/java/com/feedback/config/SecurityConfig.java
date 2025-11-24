@@ -52,6 +52,10 @@ public class SecurityConfig {
                         // Any other request needs authentication by default
                         .anyRequest().authenticated()
                 )
+                .exceptionHandling(ex -> ex
+                        // Forward to our Thymeleaf 403 page when access is denied
+                        .accessDeniedPage("/error/403")
+                )
                 .formLogin(form -> form
                         .loginPage("/auth/login")
                         .loginProcessingUrl("/auth/login")
