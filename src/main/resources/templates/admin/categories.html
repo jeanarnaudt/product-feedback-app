@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: layout(~{::title}, ~{::main})">
+    <title>Admin - Categories</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<main>
+    <h1>Manage Categories</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Slug</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="c : ${categories}">
+            <td th:text="${c.id}">1</td>
+            <td th:text="${c.name}">Feature</td>
+            <td th:text="${c.slug}">feature</td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="hint">Add create/edit/delete functionality later as needed.</p>
+</main>
+</body>
+</html>

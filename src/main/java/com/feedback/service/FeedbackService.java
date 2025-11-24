@@ -7,6 +7,7 @@ import com.feedback.dto.feedback.FeedbackCreateRequest;
 import com.feedback.dto.feedback.FeedbackDetailDto;
 import com.feedback.dto.feedback.FeedbackListItemDto;
 import com.feedback.dto.feedback.FeedbackUpdateRequest;
+import com.feedback.domain.FeedbackStatus;
 import com.feedback.repository.CategoryRepository;
 import com.feedback.repository.FeedbackRepository;
 import lombok.RequiredArgsConstructor;
@@ -137,5 +138,31 @@ public class FeedbackService {
             return;
         }
         feedbackRepository.deleteById(id);
+    }
+
+    /**
+     * Returns feedback items for the roadmap grouped by status. Convenience getters provided
+     * for Thymeleaf binding.
+     */
+    public List<FeedbackListItemDto> getPlanned() {
+        return getByStatusSorted(FeedbackStatus.PLANNED);
+    }
+
+    public List<FeedbackListItemDto> getInProgress() {
+        return getByStatusSorted(FeedbackStatus.IN_PROGRESS);
+    }
+
+    public List<FeedbackListItemDto> getLive() {
+        return getByStatusSorted(FeedbackStatus.LIVE);
+    }
+
+    private List<FeedbackListItemDto> getByStatusSorted(FeedbackStatus status) {
+        List<Feedback> items = feedbackRepository.findByStatus(status.name());
+        // Sort by upvotes desc, then comments desc, then id
+        items.sort(Comparator
+                .comparingInt(Feedback::getUpvoteCount).reversed()
+                .thenComparingInt(Feedback::getCommentCount).reversed()
+                .thenComparing(Feedback::getId));
+        return items.stream().map(feedbackMapper::toListItemDto).collect(Collectors.toList());
     }
 }

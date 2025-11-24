@@ -353,12 +353,12 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 7.4 Roadmap & admin
 
-* [ ] `roadmap/index.html`:
+* [x] `roadmap/index.html`:
 
-  * [ ] Show feedback grouped by status.
-* [ ] `admin/dashboard.html`.
-* [ ] `admin/feedback.html`.
-* [ ] `admin/categories.html`.
+  * [x] Show feedback grouped by status.
+* [x] `admin/dashboard.html`.
+* [x] `admin/feedback.html`.
+* [x] `admin/categories.html`.
 
 ---
 

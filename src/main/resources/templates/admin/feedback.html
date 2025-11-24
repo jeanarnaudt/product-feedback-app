@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: layout(~{::title}, ~{::main})">
+    <title>Admin - Feedback</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<main>
+    <h1>Manage Feedback</h1>
+    <section class="roadmap-groups">
+        <div class="group">
+            <h2>Planned</h2>
+            <ul>
+                <li th:each="item : ${planned}">
+                    <a th:href="@{'/feedback/' + ${item.id}}" th:text="${item.title}">Title</a>
+                    <span class="meta">(<span th:text="${item.categoryName}">Category</span>)</span>
+                </li>
+            </ul>
+        </div>
+        <div class="group">
+            <h2>In-Progress</h2>
+            <ul>
+                <li th:each="item : ${inProgress}">
+                    <a th:href="@{'/feedback/' + ${item.id}}" th:text="${item.title}">Title</a>
+                    <span class="meta">(<span th:text="${item.categoryName}">Category</span>)</span>
+                </li>
+            </ul>
+        </div>
+        <div class="group">
+            <h2>Live</h2>
+            <ul>
+                <li th:each="item : ${live}">
+                    <a th:href="@{'/feedback/' + ${item.id}}" th:text="${item.title}">Title</a>
+                    <span class="meta">(<span th:text="${item.categoryName}">Category</span>)</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <p class="hint">Extend this page to edit statuses, categories, and ownership as needed.</p>
+</main>
+</body>
+</html>

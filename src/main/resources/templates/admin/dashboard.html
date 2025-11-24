@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: layout(~{::title}, ~{::main})">
+    <title>Admin Dashboard</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<main>
+    <h1>Admin Dashboard</h1>
+    <section class="stats">
+        <div class="stat">Planned: <strong th:text="${plannedCount}">0</strong></div>
+        <div class="stat">In-Progress: <strong th:text="${inProgressCount}">0</strong></div>
+        <div class="stat">Live: <strong th:text="${liveCount}">0</strong></div>
+    </section>
+    <nav class="admin-nav">
+        <a class="btn" th:href="@{/admin/feedback}">Manage Feedback</a>
+        <a class="btn" th:href="@{/admin/categories}">Manage Categories</a>
+    </nav>
+    <p class="hint">These are minimal admin views for now. Extend with moderation features later.</p>
+    
+    <section class="quick-links">
+        <a th:href="@{/roadmap}">View Roadmap</a>
+    </section>
+</main>
+</body>
+</html>

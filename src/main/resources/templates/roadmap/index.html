@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: layout(~{::title}, ~{::main})">
+    <title>Roadmap</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<main>
+    <section class="roadmap-header">
+        <h1>Roadmap</h1>
+        <p>
+            <strong th:text="${plannedCount}">0</strong> Planned •
+            <strong th:text="${inProgressCount}">0</strong> In-Progress •
+            <strong th:text="${liveCount}">0</strong> Live
+        </p>
+    </section>
+
+    <section class="roadmap-columns">
+        <div class="column planned">
+            <h2>Planned (<span th:text="${plannedCount}">0</span>)</h2>
+            <ul class="feedback-list">
+                <li th:each="item : ${planned}" class="feedback-card">
+                    <a th:href="@{'/feedback/' + ${item.id}}" class="card-title" th:text="${item.title}">Title</a>
+                    <div class="meta">
+                        <span class="chip" th:text="${item.categoryName}">Category</span>
+                        <span class="status">Planned</span>
+                    </div>
+                    <div class="counts">
+                        <span class="upvotes" th:text="${item.upvoteCount}">0</span>
+                        <span class="comments" th:text="${item.commentCount}">0</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column in-progress">
+            <h2>In-Progress (<span th:text="${inProgressCount}">0</span>)</h2>
+            <ul class="feedback-list">
+                <li th:each="item : ${inProgress}" class="feedback-card">
+                    <a th:href="@{'/feedback/' + ${item.id}}" class="card-title" th:text="${item.title}">Title</a>
+                    <div class="meta">
+                        <span class="chip" th:text="${item.categoryName}">Category</span>
+                        <span class="status">In-Progress</span>
+                    </div>
+                    <div class="counts">
+                        <span class="upvotes" th:text="${item.upvoteCount}">0</span>
+                        <span class="comments" th:text="${item.commentCount}">0</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column live">
+            <h2>Live (<span th:text="${liveCount}">0</span>)</h2>
+            <ul class="feedback-list">
+                <li th:each="item : ${live}" class="feedback-card">
+                    <a th:href="@{'/feedback/' + ${item.id}}" class="card-title" th:text="${item.title}">Title</a>
+                    <div class="meta">
+                        <span class="chip" th:text="${item.categoryName}">Category</span>
+                        <span class="status">Live</span>
+                    </div>
+                    <div class="counts">
+                        <span class="upvotes" th:text="${item.upvoteCount}">0</span>
+                        <span class="comments" th:text="${item.commentCount}">0</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+</body>
+</html>
