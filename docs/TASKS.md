@@ -322,23 +322,23 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 7.2 Feedback views
 
-* [ ] `feedback/list.html`:
+* [x] `feedback/list.html`:
 
-  * [ ] Render `FeedbackListItemDto` list.
-  * [ ] Show `commentCount` and `upvoteCount`.
-  * [ ] Include filter + sort UI.
-* [ ] `feedback/detail.html`:
+  * [x] Render `FeedbackListItemDto` list.
+  * [x] Show `commentCount` and `upvoteCount`.
+  * [x] Include filter + sort UI.
+* [x] `feedback/detail.html`:
 
-  * [ ] Render `FeedbackDetailDto`.
-  * [ ] Render nested `CommentDto` + `ReplyDto`.
-  * [ ] Include forms:
+  * [x] Render `FeedbackDetailDto`.
+  * [x] Render nested `CommentDto` + `ReplyDto`.
+  * [x] Include forms:
 
-    * [ ] Add comment.
-    * [ ] Add reply under each comment.
-* [ ] `feedback/new.html` and `feedback/edit.html`:
+    * [x] Add comment.
+    * [x] Add reply under each comment.
+* [x] `feedback/new.html` and `feedback/edit.html`:
 
-  * [ ] Bind to `FeedbackCreateRequest` / `FeedbackUpdateRequest`.
-  * [ ] Show validation errors.
+  * [x] Bind to `FeedbackCreateRequest` / `FeedbackUpdateRequest`.
+  * [x] Show validation errors.
 
 ### 7.3 Auth & profile views
 

@@ -39,8 +39,21 @@
                         <div class="meta" th:text="${#temporals.format(r.createdAt, 'yyyy-MM-dd HH:mm')}">2025-01-01</div>
                     </div>
                 </div>
+                <!-- Add reply form under each comment -->
+                <div class="card" style="margin-left:16px;">
+                    <form th:action="@{|/comments/${c.id}/replies|}" method="post" th:object="${reply}">
+                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                        <!-- For redirect back to this feedback after posting reply -->
+                        <input type="hidden" name="feedbackId" th:value="${feedback.id}"/>
+                        <div class="field">
+                            <label th:for="${'reply-content-' + c.id}">Reply</label>
+                            <textarea th:id="${'reply-content-' + c.id}" th:field="*{content}" placeholder="Type your reply..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Reply</button>
+                    </form>
+                </div>
             </div>
-        </div>
+            </div>
 
         <div class="card">
             <h3>Add a comment</h3>

@@ -35,6 +35,8 @@ public class FeedbackController {
     @GetMapping("/{id}")
     public String feedbackDetail(@PathVariable Long id, Model model) {
         model.addAttribute("feedback", feedbackService.getFeedbackDetail(id));
+        // For reply forms under each comment
+        model.addAttribute("reply", new com.feedback.dto.reply.ReplyCreateRequest());
         return "feedback/detail";
     }
 
