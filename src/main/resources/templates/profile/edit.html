@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title>Edit Profile • Product Feedback</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<section>
+    <div class="container">
+        <h1>Edit Profile</h1>
+        <div class="card">
+            <form th:action="@{/profile/edit}" method="post" th:object="${form}">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+
+                <div class="field">
+                    <label for="displayName">Display name</label>
+                    <input id="displayName" th:field="*{displayName}" type="text" maxlength="100"/>
+                    <div class="error" th:if="${#fields.hasErrors('displayName')}" th:errors="*{displayName}"></div>
+                </div>
+
+                <div class="field">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" th:field="*{bio}" maxlength="500"></textarea>
+                    <div class="error" th:if="${#fields.hasErrors('bio')}" th:errors="*{bio}"></div>
+                </div>
+
+                <div class="field">
+                    <label for="avatarUrl">Avatar URL</label>
+                    <input id="avatarUrl" th:field="*{avatarUrl}" type="url" maxlength="500" placeholder="https://..."/>
+                    <div class="error" th:if="${#fields.hasErrors('avatarUrl')}" th:errors="*{avatarUrl}"></div>
+                </div>
+
+                <div class="actions">
+                    <a class="btn" th:href="@{/profile}">Cancel</a>
+                    <button class="btn btn-primary" type="submit">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

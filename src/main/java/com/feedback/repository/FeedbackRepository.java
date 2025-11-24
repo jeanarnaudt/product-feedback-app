@@ -13,4 +13,6 @@ public interface FeedbackRepository extends JpaRepository<Feedback, Long> {
     List<Feedback> findByStatus(String status);
 
     // Methods for filtering and sorting can be added later as needed
+
+    List<Feedback> findByAuthorId(Long authorId);
 }

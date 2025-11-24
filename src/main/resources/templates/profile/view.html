@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title>My Profile • Product Feedback</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<section>
+    <div class="container">
+        <h1>My Profile</h1>
+
+        <div class="profile card">
+            <div class="profile-header">
+                <img th:if="${profile.avatarUrl}" th:src="${profile.avatarUrl}" alt="Avatar" class="avatar"/>
+                <div class="profile-meta">
+                    <h2 th:text="${profile.displayName != null ? profile.displayName : profile.username}">User</h2>
+                    <p th:text="${profile.email}">email@example.com</p>
+                </div>
+                <a class="btn" th:href="@{/profile/edit}">Edit profile</a>
+            </div>
+            <p th:if="${profile.bio}" th:text="${profile.bio}"></p>
+        </div>
+
+        <div class="card">
+            <h2>Your feedback</h2>
+            <div th:if="${#lists.isEmpty(myFeedback)}">
+                <p>You haven't created any feedback yet.</p>
+                <a class="btn btn-primary" th:href="@{/feedback/new}">Create feedback</a>
+            </div>
+            <ul class="feedback-list" th:if="${!#lists.isEmpty(myFeedback)}">
+                <li th:each="f : ${myFeedback}">
+                    <a th:href="@{'/feedback/' + ${f.id}}" th:text="${f.title}">Feedback title</a>
+                    <div class="meta">
+                        <span th:text="${f.categoryName}">Category</span>
+                        • <span th:text="${f.status}">status</span>
+                        • <span th:text="${f.upvoteCount}"></span> upvotes
+                        • <span th:text="${f.commentCount}"></span> comments
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

@@ -1,6 +1,8 @@
 package com.feedback.service;
 
 import com.feedback.domain.User;
+import com.feedback.dto.user.UserProfileDto;
+import com.feedback.dto.user.UserProfileUpdateRequest;
 import com.feedback.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
@@ -74,5 +76,25 @@ public class UserService {
     public User getByUsernameOrThrow(String username) {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found: " + username));
+    }
+
+    public UserProfileDto toProfileDto(User user) {
+        return UserProfileDto.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .email(user.getEmail())
+                .displayName(user.getDisplayName())
+                .bio(user.getBio())
+                .avatarUrl(user.getAvatarUrl())
+                .build();
+    }
+
+    @Transactional
+    public void updateProfile(UserProfileUpdateRequest request) {
+        User current = getCurrentUser();
+        current.setDisplayName(request.getDisplayName());
+        current.setBio(request.getBio());
+        current.setAvatarUrl(request.getAvatarUrl());
+        userRepository.save(current);
     }
 }

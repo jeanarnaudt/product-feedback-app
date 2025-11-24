@@ -76,6 +76,11 @@ public class FeedbackService {
         return feedbackMapper.toDetailDto(entity);
     }
 
+    public List<FeedbackListItemDto> getUserFeedback(Long userId) {
+        List<Feedback> items = feedbackRepository.findByAuthorId(userId);
+        return items.stream().map(feedbackMapper::toListItemDto).collect(Collectors.toList());
+    }
+
     @Transactional
     public Long createFeedback(FeedbackCreateRequest request) {
         Feedback entity = feedbackMapper.fromCreateRequest(request);

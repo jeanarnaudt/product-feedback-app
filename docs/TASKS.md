@@ -342,14 +342,14 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 7.3 Auth & profile views
 
-* [ ] `auth/login.html`.
-* [ ] `auth/register.html`.
-* [ ] `profile/view.html`:
+* [x] `auth/login.html`.
+* [x] `auth/register.html`.
+* [x] `profile/view.html`:
 
-  * [ ] Show user info and list of their feedback.
-* [ ] `profile/edit.html`:
+  * [x] Show user info and list of their feedback.
+* [x] `profile/edit.html`:
 
-  * [ ] Form for display name, bio, avatar upload.
+  * [x] Form for display name, bio, avatar upload.
 
 ### 7.4 Roadmap & admin
 
