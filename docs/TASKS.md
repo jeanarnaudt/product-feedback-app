@@ -300,13 +300,13 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 6.2 UserDetails & Auth
 
-* [ ] Implement `CustomUserDetails` and `UserDetailsService` using `UserRepository`.
-* [ ] Wire password encoding with BCrypt (`PasswordEncoder` bean).
-* [ ] Implement `AuthController`:
+* [x] Implement `CustomUserDetails` and `UserDetailsService` using `UserRepository`.
+* [x] Wire password encoding with BCrypt (`PasswordEncoder` bean).
+* [x] Implement `AuthController`:
 
-  * [ ] `GET /auth/login` view.
-  * [ ] `GET /auth/register` view.
-  * [ ] `POST /auth/register` → create user via `UserService`.
+  * [x] `GET /auth/login` view.
+  * [x] `GET /auth/register` view.
+  * [x] `POST /auth/register` → create user via `UserService`.
 
 ---
 
