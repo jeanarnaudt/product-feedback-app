@@ -385,13 +385,13 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 8.3 Testing & cleanup
 
-* [ ] Write unit tests for:
+* [x] Write unit tests for:
 
-  * [ ] `FeedbackService` core methods.
-  * [ ] `CommentService` and `ReplyService` counter logic.
-* [ ] Write basic repository tests.
+  * [x] `FeedbackService` core methods.
+  * [x] `CommentService` and `ReplyService` counter logic.
+* [x] Write basic repository tests.
 * [ ] Manual QA: run through all main flows.
-* [ ] Remove unused code, TODOs, and debug logs.
+* [x] Remove unused code, TODOs, and debug logs.
 
 ---
 

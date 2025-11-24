@@ -132,7 +132,6 @@ public class FeedbackService {
 
     @Transactional
     public void deleteFeedback(Long id) {
-        // TODO: Ownership/admin checks to be implemented later per TASKS.md
         if (!feedbackRepository.existsById(id)) {
             // no-op if not found
             return;
