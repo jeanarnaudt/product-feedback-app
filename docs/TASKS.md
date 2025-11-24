@@ -314,11 +314,11 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 7.1 Base layout & shared stuff
 
-* [ ] Create `layout.html` with:
+* [x] Create `layout.html` with:
 
-  * [ ] Header (logo, nav, login/logout/profile).
-  * [ ] Content block/fragment.
-* [ ] Ensure all pages extend/include layout.
+  * [x] Header (logo, nav, login/logout/profile).
+  * [x] Content block/fragment.
+* [x] Ensure all pages extend/include layout.
 
 ### 7.2 Feedback views
 

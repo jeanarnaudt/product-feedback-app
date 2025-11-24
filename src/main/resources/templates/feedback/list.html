@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title>Suggestions • Product Feedback</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+            <div>
+                <strong th:text="${#lists.size(feedback)} + ' Suggestions'"></strong>
+            </div>
+            <div>
+                <form method="get" th:action="@{/feedback}" style="display:flex;gap:8px;align-items:center;">
+                    <label for="category" class="meta">Category</label>
+                    <select id="category" name="category">
+                        <option value="" th:selected="${param.category == null}">All</option>
+                        <option value="feature" th:selected="${param.category=='feature'}">Feature</option>
+                        <option value="ui" th:selected="${param.category=='ui'}">UI</option>
+                        <option value="ux" th:selected="${param.category=='ux'}">UX</option>
+                        <option value="enhancement" th:selected="${param.category=='enhancement'}">Enhancement</option>
+                        <option value="bug" th:selected="${param.category=='bug'}">Bug</option>
+                    </select>
+                    <label for="sort" class="meta">Sort</label>
+                    <select id="sort" name="sort">
+                        <option value="mostUpvotes">Most Upvotes</option>
+                        <option value="leastUpvotes">Least Upvotes</option>
+                        <option value="mostComments">Most Comments</option>
+                        <option value="leastComments">Least Comments</option>
+                    </select>
+                    <button class="btn btn-secondary" type="submit">Apply</button>
+                </form>
+            </div>
+            <div>
+                <a th:href="@{/feedback/new}" class="btn btn-primary">+ Add Feedback</a>
+            </div>
+        </div>
+
+        <div th:if="${#lists.isEmpty(feedback)}" class="card">
+            <p class="meta">No suggestions found.</p>
+        </div>
+
+        <div th:each="f : ${feedback}" class="card">
+            <h3><a th:href="@{|/feedback/${f.id}|}" th:text="${f.title}">Feedback title</a></h3>
+            <p class="meta">
+                <span th:text="${f.categoryName}">Category</span>
+                • <span th:text="${f.status}">Status</span>
+            </p>
+            <p>
+                <strong th:text="${f.upvoteCount}">0</strong> upvotes ·
+                <strong th:text="${f.commentCount}">0</strong> comments
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
