@@ -7,10 +7,11 @@
     <link rel="stylesheet" th:href="@{/css/main.css}" href="/css/main.css"/>
 </head>
 <body>
-<header class="site-header">
+<a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header" role="banner">
     <div class="container header-inner">
-        <a class="logo" th:href="@{/}">ProductFeedback</a>
-        <nav class="nav">
+        <a class="logo" th:href="@{/}" aria-label="Product Feedback home">ProductFeedback</a>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
             <a th:href="@{/feedback}" class="nav-link">Feedback</a>
             <a th:href="@{/roadmap}" class="nav-link">Roadmap</a>
         </nav>
@@ -30,7 +31,7 @@
     </div>
 </header>
 
-<main class="container">
+<main id="main" class="container" tabindex="-1">
     <div th:replace="${content}">
         <section>
             <h1>Content</h1>
@@ -39,7 +40,7 @@
     </div>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
     <div class="container">
         <p>&copy; <span th:text="${#dates.format(#dates.createNow(),'yyyy')}">2025</span> Product Feedback</p>
     </div>

@@ -376,12 +376,12 @@ I’ll keep the same rough phases, but break each item into tiny, checkable step
 
 ### 8.2 Styling & responsiveness
 
-* [ ] Create `static/css/main.css`.
-* [ ] Implement desktop layout matching Frontend Mentor.
-* [ ] Add tablet breakpoints.
-* [ ] Add mobile breakpoints.
-* [ ] Implement hover/focus/active states.
-* [ ] Quick accessibility pass (labels, alt text, focus).
+* [x] Create `static/css/main.css`.
+* [x] Implement desktop layout matching Frontend Mentor.
+* [x] Add tablet breakpoints.
+* [x] Add mobile breakpoints.
+* [x] Implement hover/focus/active states.
+* [x] Quick accessibility pass (labels, alt text, focus).
 
 ### 8.3 Testing & cleanup
 
