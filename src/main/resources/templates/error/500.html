@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server Error</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+        .error { max-width: 720px; margin: 10vh auto; text-align: center; padding: 2rem; }
+        .error h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .error p { color: #555; }
+        .error a { display: inline-block; margin-top: 1rem; }
+        .muted { color: #888; font-size: .9rem; }
+    </style>
+</head>
+<body>
+<main class="error">
+    <h1>500</h1>
+    <h2>Something went wrong</h2>
+    <p th:text="${message}">An unexpected error occurred.</p>
+    <p class="muted">If the problem persists, please contact support.</p>
+    <a href="/">Back to Home</a>
+</main>
+</body>
+</html>
