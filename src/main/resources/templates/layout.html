@@ -16,11 +16,11 @@
             <a th:href="@{/roadmap}" class="nav-link">Roadmap</a>
         </nav>
         <div class="auth">
-            <div th:if="${#httpServletRequest.userPrincipal == null}">
+            <div th:if="${#request.userPrincipal == null}">
                 <a th:href="@{/auth/login}" class="btn btn-link">Login</a>
                 <a th:href="@{/auth/register}" class="btn btn-primary">Register</a>
             </div>
-            <div th:if="${#httpServletRequest.userPrincipal != null}">
+            <div th:if="${#request.userPrincipal != null}">
                 <a th:href="@{/profile}" class="btn btn-link">My Profile</a>
                 <form th:action="@{/auth/logout}" method="post" class="inline">
                     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
